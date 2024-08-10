@@ -1,0 +1,5 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"","","ping","0","0","1","0","0"
+"","","auth","0","0","1","0","0"
+"","","booking/{{id}}","0","0","4","0","0"
+"","","booking","0","0","2","0","0"
