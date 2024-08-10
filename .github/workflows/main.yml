@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       Token:
-        description: " User Name "
+        description: " Token "
         required: true
         default: 'test'
 
