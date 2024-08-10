@@ -18,9 +18,17 @@ jobs:
           npm install -g newman
           npm install -g newman-reporter-my_allure.tgz
 
+      - name: Write data to file
+        run: |
+          echo '[{"Content-Type": "application/json","user_name": "admin"}]' > data.json
+
+      - name: Verify file content
+        run: cat data.json
+
       - name: Run POSTMAN collection
         run: |
-          newman run pm/restful-booker.postman_collection.json -e pm/booking_env.postman_environment.json -r my_allure
+          newman run pm/RB_coll.json -d data.json -r my_allure
+          # newman run pm/restful-booker.postman_collection.json -e pm/booking_env.postman_environment.json -r my_allure
         continue-on-error: true
 
       - name: Show report
