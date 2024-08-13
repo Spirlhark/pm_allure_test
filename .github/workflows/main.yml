@@ -29,7 +29,7 @@ jobs:
       - name: Write data to file
         run: |
           echo '[{"Content-Type": "application/json","user_name": "${{ inputs.Token }}"}]' > data.json
-
+ 
       - name: Verify file content
         run: cat data.json
 
